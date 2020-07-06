@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <script src="https://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="__JS__/register.js"></script>
+    <style>
+        #regiser{
+            position: absolute;
+            top: 50%;
+            height: 500px;
+            margin-top: -250px;
+            width: 500px;
+            left:50%;
+            margin-left: -250px;
+        }
+    </style>
+</head>
+<body>
+<a class="btn btn-default" href="../show/login" role="button">返回登陆</a>
+    <form class="form-horizontal" id="regiser" method="post">
+        <h1 style="text-align: center;padding-bottom: 30px" >用户注册</h1>
+        <div class="form-group">
+            <label for="user" class="col-sm-3 control-label">账号</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="user" name="user">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name" class="col-sm-3 control-label">用户名</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-3 control-label">密码</label>
+            <div class="col-sm-9">
+                <input type="password" class="form-control" id="password" name="password">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password2" class="col-sm-3 control-label">再次输入密码</label>
+            <div class="col-sm-9">
+                <input type="password" class="form-control" id="password2" name="password">
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-3 control-label">学院</label>
+            <div class="col-sm-9">
+            <select class=" form-control" name="dept" id="dept">
+                <option>经济与管理学院</option>
+                <option>教育学院</option>
+                <option>文学院</option>
+                <option>音乐学院</option>
+                <option>生命科学学院</option>
+                <option>计算机科学与软件学院</option>
+                <option>政法学院</option>
+                <option>体育与健康学院</option>
+                <option>外国语学院</option>
+                <option>美术学院</option>
+                <option>化学化工学院</option>
+                <option>电子信息与机电工程学院</option>
+                <option>旅游学院</option>
+                <option>数学与统计学院</option>
+            </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="major" class="col-sm-3 control-label">专业</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="major"  name="major">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-5 col-sm-9">
+                <label class="radio-inline">
+                    <input type="radio" name="gender" id="gender1" value="男" checked="true"> 男
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="gender" id="gender2" value="女"> 女
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-5 col-sm-7">
+                <button type="button" class="btn btn-default"   id="submit">注册</button>
+                <button type="reset" class="btn btn-default" >重置</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

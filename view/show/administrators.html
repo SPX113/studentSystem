@@ -1,0 +1,71 @@
+{layout name="public/layout" replace='__CONTENT__'}
+<script src="__JS__/administrators.js" type="text/javascript"></script>
+<script src="__JS__/vue.js"></script>
+<div class="row" id="list">
+    <div class="col-md-2" >
+        <ul class="list-group">
+            <li class="list-group-item" :class="{an : isan == 1}" @click="isan=1">用户查询</li>
+            <li class="list-group-item" :class="{an : isan == 2}" @click="isan=2">成绩导入</li>
+            <li class="list-group-item" :class="{an : isan == 3}" @click="isan=3">课程删除</li>
+            <li class="list-group-item" :class="{an : isan == 4}" @click="isan=4">发表公告</li>
+        </ul>
+    </div>
+    <div class="col-md-10">
+        <div id="form"  style="width: 700px;padding-left: 200px" v-if="isan==1">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="data" class="col-sm-2 control-label">搜索<span class="glyphicon glyphicon-search" style="padding-left: 5px"></span></label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="data" placeholder="请输入关键词....">
+                    </div>
+                    <div class="col-sm-2"><button type="button" class="btn btn-default"  id="search"  onclick="yhcx()">搜索</button></div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <input type="radio" value="账号" name="mode" checked="true">账号
+                        <input  type="radio" value="名称" name="mode">名称
+                    </div>
+                </div>
+            </form>
+        </div>
+        <form v-if="isan==2" style="width: 700px;padding-left: 200px" id="form2">
+            <div class="form-group">
+                <label for="id">学号</label>
+                <input type="text" class="form-control" id="id" >
+            </div>
+            <div class="form-group">
+                <label for="courseid">课程号</label>
+                <input type="text" class="form-control" id="courseid" >
+            </div>
+            <div class="form-group">
+                <label for="scores">成绩</label>
+                <input type="text" class="form-control" id="scores" >
+            </div>
+            <button type="button" class="btn btn-default" id="btn1" onclick="cjdr()">导入</button>
+        </form>
+        <form v-if="isan==3" style="width: 700px;padding-left: 200px" id="form3">
+            <div class="form-group">
+                <label for="delid">学号</label>
+                <input type="text" class="form-control" id="delid" >
+            </div>
+            <div class="form-group">
+                <label for="delcourseid">课程号</label>
+                <input type="text" class="form-control" id="delcourseid" >
+            </div>
+            <button type="button" class="btn btn-default" id="btn2" onclick="delcourse()">删除</button>
+        </form>
+        <form v-if="isan==4" style="width: 700px;padding-left: 200px" id="form4">
+            <label for="notice">系统公告</label>
+            <textarea class="form-control" rows="3" id="notice" style="border-radius:5px;width: 400px;height: 200px;padding: 10px;resize: none;"></textarea>
+            <button type="button" class="btn btn-default" onclick="message()">发布</button>
+        </form>
+    </div>
+</div>
+<script>
+    const list = new Vue({
+      el:"#list",
+      data:{
+        isan:1
+      }
+    })
+</script>

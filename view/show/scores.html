@@ -1,0 +1,33 @@
+{layout name="public/layout" replace='__CONTENT__'}
+<div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-11">
+        <table class="table table-hover">
+            <tr>
+                <th>课程编号</th>
+                <th>课程名称</th>
+                <th>授课老师</th>
+                <th>开始时间</th>
+                <th>绩点</th>
+                <th>成绩</th>
+            </tr>
+
+                {volist name="scores" id="sc"}
+                <tr>
+                    <td>{$sc.courseid}</td>
+                    <td>{$sc.course}</td>
+                    <td>{$sc.teacher}</td>
+                    <td>{:substr($sc.CreateTime,0,9)}</td>
+                    {if $sc.scores!=null}
+                        <td>{$sc.point}</td>
+                        <td>{$sc.scores}</td>
+                    {else}
+                        <td colspan="2" style="color: red">成绩未出</td>
+                    {/if}
+                </tr>
+                {/volist}
+
+        </table>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3可切换背景颜色的日历控件DEMO演示</title>
+    <link rel="stylesheet" href="__CSS__/calendar.css">
+</head>
+<body>
+
+<div class="calendar">
+    <div class="header">
+        <a data-action="prev-month" href="javascript:void(0)" title="Previous Month"><i></i></a>
+        <div class="text" data-render="month-year"></div>
+        <a data-action="next-month" href="javascript:void(0)" title="Next Month"><i></i></a>
+    </div>
+    <div class="months" data-flow="left">
+        <div class="month month-a">
+            <div class="render render-a"></div>
+        </div>
+        <div class="month month-b">
+            <div class="render render-b"></div>
+        </div>
+    </div>
+</div>
+<script  src="__JS__/calendar.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{layout name="public/layout" replace='__CONTENT__'}
+<div class="row">
+<div class="col-md-3" >
+ <div class="calendar">
+  <div class="header">
+   <a data-action="prev-month" href="javascript:void(0)" title="Previous Month"><i></i></a>
+   <div class="text" data-render="month-year"></div>
+   <a data-action="next-month" href="javascript:void(0)" title="Next Month"><i></i></a>
+  </div>
+  <div class="months" data-flow="left">
+   <div class="month month-a">
+    <div class="render render-a"></div>
+   </div>
+   <div class="month month-b">
+    <div class="render render-b"></div>
+   </div>
+  </div>
+ </div>
+ <script  src="__JS__/calendar.js"></script>
+</div>
+<div class="col-md-9">
+<table class="table">
+ <tr><th>学号</th><th>姓名</th><th>所在学院</th><th>专业</th><th>性别</th></tr>
+ <tr><td>{$login["id"]}</td><td>{$login["name"]}</td><td>{$login["dept"]}</td><td>{$login["major"]}</td><td>{$login["gender"]}</td></tr>
+</table>
+</div>
+</div>
